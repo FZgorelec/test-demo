@@ -6,13 +6,15 @@ pipeline{
 
         stage("build"){
             steps {
-                echo 'build'
+                echo 'building'
+                sh './gradlew clean assemble'
             }
         }
 
         stage("test"){
             steps {
-                    echo 'running tests'    
+                    echo 'running tests'
+                    sh './gradlew clean check'
             }
         }
 
