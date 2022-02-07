@@ -14,7 +14,6 @@ pipeline{
         stage("build"){
             steps {
                 echo "building ${MY_ENV_VARIABLE}" 
-                sh './gradlew clean assemble'
             }
         }
 
@@ -26,7 +25,6 @@ pipeline{
             }
             steps {
                     echo 'running tests'
-                    sh './gradlew clean check'
             }
         }
 
