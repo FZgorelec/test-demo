@@ -26,7 +26,7 @@ pipeline{
             }
             steps {
                     echo 'running tests'
-                    sh './gradlew clean check'
+                    sh './gradlew test'
             }
         }
 
